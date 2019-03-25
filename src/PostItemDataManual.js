@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 
 
-class PostItemDataManual extends Component {
-
+class PostItemData extends Component {
 
     render() {
         return (
             <div>
                 {
                     this.props.image_url &&
-                    <img src={this.props.image_url} alt="" />
+                    <iframe id="inlineFrameExample"
+                        title="Inline Frame Example"
+                        src={this.props.image_url}>
+                    </iframe>
+
+
                 }
             </div>
         );
     }
 }
 
-export default PostItemDataManual;
+export default PostItemData;
