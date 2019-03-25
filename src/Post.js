@@ -11,7 +11,8 @@ class Post extends Component {
                     this.props.items.map(items => {
                         return (
                             <PostItem key={items.item_id}
-                                image_data={items.item_data}
+                                item_id={items.item_id}
+                                item_data={items.item_data}
                                 service_name={items.service_name}
                                 item_published={items.item_published} />
                         );

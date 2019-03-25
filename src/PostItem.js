@@ -6,16 +6,17 @@ class PostItem extends Component {
 
 
     render() {
+        const { item_data } = this.props;
         return (
             <div>
                 {
-                    this.props.items.map(items => {
-                        return (
-                            <PostItemData key={items.item_data.image_id}
-                                image_url={items.item_data.image_url} />
-                        );
-
-                    })
+                    <PostItemData
+                        image_id={item_data.image_id}
+                        text={item_data.text}
+                        link={item_data.link}
+                        link_text={item_data.link_text}
+                        image_url={item_data.image_url}
+                    />
                 }
             </div>
         );

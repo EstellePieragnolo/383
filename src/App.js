@@ -25,11 +25,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <Post items={this.state.items} />
 
-        <Post items={this.state.items} />
-
-      </div>
     );
   }
 }
