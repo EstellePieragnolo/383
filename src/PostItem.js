@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PostItemData from './PostItemData';
+import PostItemDataManual from './PostItemDataManual';
 
 class PostItem extends Component {
 
@@ -10,7 +10,7 @@ class PostItem extends Component {
         return (
             <div>
                 {
-                    <PostItemData
+                    <PostItemDataManual
                         image_id={item_data.image_id}
                         text={item_data.text}
                         link={item_data.link}
