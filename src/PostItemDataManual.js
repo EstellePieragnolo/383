@@ -46,7 +46,7 @@ class PostItemData extends Component {
         return (
             <div>
 
-                <img ref="image" src={this.props.image_url} className="hidden" alt="ManualPicturePost" />
+                <img ref="image" src="\/\/aff-stream-bullring.383apps.co.uk\/wp-content\/uploads\/2014\/08\/1210TV-aff-square-large.jpg" className="hidden" alt="ManualPicturessPost" />
             </div>
         );
     }
