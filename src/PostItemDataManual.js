@@ -12,6 +12,10 @@ class PostItemDataManual extends Component {
                         <img ref="image" src="https://picsum.photos/400/?random" alt="ManualPicturessPost" />
                     </div>
                 }
+                <div className="manualText">
+                    <p>{this.props.text}</p>
+                    <a href={this.props.link} target="_blank" rel="noopener noreferrer">{this.props.link_text}</a>
+                </div>
             </div>
         );
     }

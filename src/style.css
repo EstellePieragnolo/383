@@ -1,5 +1,5 @@
 .postItems {
-  width: calc((100% / 3) - 60px);
+  width: calc((100% / 3) - 80px);
   border: 2px solid #ebebeb;
   border-radius: 5px;
   margin: 30px 0;
@@ -15,6 +15,13 @@
 }
 .manualPicture img {
   width: 100%;
+}
+.manualText {
+  margin: 40px;
+}
+.manualText a {
+  text-decoration: none;
+  color: red;
 }
 
 .insta {

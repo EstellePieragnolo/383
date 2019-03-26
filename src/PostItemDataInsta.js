@@ -5,10 +5,10 @@ class PostItemDataInsta extends Component {
 
     render() {
         return (
-            <div classname="insta">
+            <div className="insta">
                 {
                     this.props.image_url &&
-                    <div classname="instaPicture">
+                    <div className="instaPicture">
                         <img src="https://picsum.photos/400" alt="InstagramPicturePost" />
                     </div>
                 }
