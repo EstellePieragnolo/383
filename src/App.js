@@ -12,7 +12,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://private-cc77e-aff.apiary-mock.com/posts')
+    fetch('http://private-cc77e-aff.apiary-mock.com/posts', {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "referer, range, accept-encoding, x-requested-with"
+      }
+    })
       .then(response => response.json())
       .then(data => this.setState({ items: data.items }))
       .catch(error => {
@@ -26,7 +31,6 @@ class App extends Component {
   render() {
     return (
       <Post items={this.state.items} />
-
     );
   }
 }
