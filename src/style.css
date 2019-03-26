@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+  padding: 30px 40px;
 }
 .manualLogo {
   position: absolute;
@@ -27,14 +28,8 @@
   color: white;
   font-size: 20px;
 }
-.manualPicture {
-  margin: 40px;
-}
 .manualPicture img {
   width: 100%;
-}
-.manualText {
-  margin: 40px;
 }
 .manualText a {
   text-decoration: none;
@@ -64,6 +59,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 30px 40px;
 }
 .twitterLogo {
   position: absolute;
@@ -78,9 +74,6 @@
 }
 .twitterLogo img {
   width: 100%;
-}
-.twitterText {
-  margin: 40px;
 }
 .twitterText h1 {
   text-align: center;

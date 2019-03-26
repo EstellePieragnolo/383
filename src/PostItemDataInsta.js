@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import instaLogo from './img/logo_insta.png'
 import './_PostItemDataInsta.scss';
 
 class PostItemDataInsta extends Component {
@@ -6,6 +7,9 @@ class PostItemDataInsta extends Component {
     render() {
         return (
             <div className="insta">
+                <div className="instaLogo">
+                    <img src={instaLogo} alt="" />
+                </div>
                 <a className="instaItem" href={this.props.link} target="_blank" rel="noopener noreferrer">
                     {
                         this.props.image_url &&
