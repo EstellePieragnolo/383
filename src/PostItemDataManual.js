@@ -5,9 +5,14 @@ class PostItemDataManual extends Component {
 
     render() {
         return (
-
-            this.props.image_url &&
-            <img ref="image" src="https://picsum.photos/200/?random" alt="ManualPicturessPost" />
+            <div className="manual">
+                {
+                    this.props.image_url &&
+                    <div className="manualPicture">
+                        <img ref="image" src="https://picsum.photos/400/?random" alt="ManualPicturessPost" />
+                    </div>
+                }
+            </div>
         );
     }
 }

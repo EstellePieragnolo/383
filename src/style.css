@@ -5,4 +5,28 @@
   margin: 30px 0;
 }
 
+.manual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.manualPicture {
+  margin: 40px;
+}
+.manualPicture img {
+  width: 100%;
+}
+
+.insta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.instaPicture {
+  margin: 40px;
+}
+.instaPicture img {
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */

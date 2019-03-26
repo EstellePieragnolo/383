@@ -1,0 +1,13 @@
+.manual {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &Picture {
+        margin: 40px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
