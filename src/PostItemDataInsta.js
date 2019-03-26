@@ -8,7 +8,7 @@ class PostItemDataInsta extends Component {
             <div>
                 {
                     this.props.image_url &&
-                    <img src={this.props.image_url} alt="InstagramPicturePost" />
+                    <img src="https://picsum.photos/200" alt="InstagramPicturePost" />
 
                 }
             </div>

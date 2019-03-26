@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://private-cc77e-aff.apiary-mock.com/posts')
+    fetch('https://private-cc77e-aff.apiary-mock.com/posts', { method: 'GET', mode: 'cors' })
       .then(response => response.json())
       .then(data => this.setState({ items: data.items }))
       .catch(error => {

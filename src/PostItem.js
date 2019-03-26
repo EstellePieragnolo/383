@@ -6,6 +6,11 @@ class PostItem extends Component {
 
 
 
+    // toHTTPS = (url) => {
+    //     const https = url.replace('http:', 'https:');
+    //     return https
+    // }
+
     render() {
         const { item_data } = this.props;
         return (
