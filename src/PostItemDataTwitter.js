@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import twitterLogo from './img/logo_twitter.png';
+import Linkify from 'react-linkify';
 import './_PostItemDataTwitter.scss';
 
 class PostItemDataTwitter extends Component {
+
+    linkifyUrl = (string) => {
+        return <Linkify>{string}</Linkify>
+    }
 
     render() {
         return (
@@ -12,7 +17,7 @@ class PostItemDataTwitter extends Component {
                 </div>
                 <div className="twitterText">
                     <h1>{this.props.userName}</h1>
-                    <p>{this.props.tweet}</p>
+                    {this.linkifyUrl(this.props.tweet)}
                 </div>
             </div>
         );
