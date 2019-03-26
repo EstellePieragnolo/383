@@ -42,11 +42,14 @@ class PostItemData extends Component {
     //     }
     // }
 
+    toHTTPS = (url) => {
+        return url.replace('http:', 'https:')
+    }
     render() {
         return (
             <div>
 
-                <img ref="image" src={this.props.image_url} className="hidden" alt="ManualPicturessPost" />
+                <img ref="image" src={this.toHTTPS(this.props.image_url)} alt="ManualPicturessPost" />
             </div>
         );
     }
