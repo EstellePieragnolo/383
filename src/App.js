@@ -12,7 +12,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://private-cc77e-aff.apiary-mock.com/posts')
+    fetch('https://private-cc77e-aff.apiary-mock.com/posts', {
+      headers: {
+        "Content-Security-Policy": "upgrade-insecure-requests"
+      }
+    })
       .then(response => response.json())
       .then(data => this.setState({ items: data.items }))
       .catch(error => {
