@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
 import PostItemDataManual from './PostItemDataManual';
 import PostItemDataInsta from './PostItemDataInsta';
+import PostItemDataTwitter from './PostItemDataTwitter';
 
 class PostItem extends Component {
-
-
-
-    // toHTTPS = (url) => {
-    //     const https = url.replace('http:', 'https:');
-    //     return https
-    // }
 
     render() {
         const { item_data } = this.props;
@@ -34,10 +28,13 @@ class PostItem extends Component {
                         image_url={item_data.image.medium}
                     />
                 }
-                {/* {
+                {
                     this.props.service_name === 'Twitter' &&
-                    
-                } */}
+                    <PostItemDataTwitter
+                        tweet={item_data.tweet}
+                        userName={item_data.user.username} />
+
+                }
             </div>
         );
     }

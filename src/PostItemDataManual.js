@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class PostItemData extends Component {
+class PostItemDataManual extends Component {
 
     render() {
         return (
@@ -12,4 +12,4 @@ class PostItemData extends Component {
     }
 }
 
-export default PostItemData;
+export default PostItemDataManual;
