@@ -6,12 +6,18 @@ class PostItemDataInsta extends Component {
     render() {
         return (
             <div className="insta">
-                {
-                    this.props.image_url &&
-                    <div className="instaPicture">
-                        <img src="https://picsum.photos/400" alt="InstagramPicturePost" />
+                <a className="instaItem" href={this.props.link} target="_blank" rel="noopener noreferrer">
+                    {
+                        this.props.image_url &&
+                        <div className="instaItemPicture">
+                            <img src="https://picsum.photos/400" alt="InstagramPicturePost" />
+                        </div>
+                    }
+                    <div className="instaItemText">
+                        <h4>{this.props.user_name}</h4>
+                        <p>{this.props.caption}</p>
                     </div>
-                }
+                </a>
             </div>
         );
     }

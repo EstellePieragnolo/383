@@ -29,10 +29,16 @@
   flex-direction: column;
   justify-content: center;
 }
-.instaPicture {
+.insta a {
+  text-decoration: none;
+}
+.insta a:visited {
+  color: black;
+}
+.insta aPicture {
   margin: 40px;
 }
-.instaPicture img {
+.insta aPicture img {
   width: 100%;
 }
 

@@ -3,11 +3,28 @@
     flex-direction: column;
     justify-content: center;
 
-    &Picture {
-        margin: 40px;
+    &Item {
+        text-decoration: none;
 
-        img {
-            width: 100%;
+        &:visited {
+            color: black;
+        }
+
+        &Picture {
+            margin: 40px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &Text {
+            margin: 40px;
+
+            a {
+                text-decoration: none;
+                color: red;
+            }
         }
     }
 }
