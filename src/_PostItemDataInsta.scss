@@ -6,7 +6,8 @@
     &Item {
         text-decoration: none;
 
-        &:visited {
+        &:visited,
+        &:active {
             color: black;
         }
 

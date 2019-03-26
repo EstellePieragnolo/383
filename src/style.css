@@ -9,6 +9,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+}
+.manualLogo {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: red;
+  border-radius: 5px;
+  width: 60px;
+  height: 75px;
+  top: -20px;
+  left: 40px;
+}
+.manualLogo p {
+  color: white;
+  font-size: 20px;
 }
 .manualPicture {
   margin: 40px;
@@ -40,6 +57,40 @@
 }
 .insta aPicture img {
   width: 100%;
+}
+
+.twitter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.twitterLogo {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  background-color: black;
+  border-radius: 5px;
+  width: 60px;
+  height: 75px;
+  top: -20px;
+  left: 40px;
+}
+.twitterLogo img {
+  width: 100%;
+}
+.twitterText {
+  margin: 40px;
+}
+.twitterText h1 {
+  text-align: center;
+}
+.twitterText p {
+  text-align: center;
+}
+.twitterText a {
+  text-decoration: none;
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
