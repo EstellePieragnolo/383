@@ -30,6 +30,13 @@
 .manualPicture img {
   width: 100%;
 }
+.manualText p {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  color: #747474;
+  margin-top: 25px;
+}
 .manualText a {
   text-decoration: none;
   color: red;
@@ -67,7 +74,16 @@
 .instaItemPicture img {
   width: 100%;
 }
-.instaItemText a {
+.instaItemText h3 {
+  color: #747474;
+  margin: 25px 0;
+}
+.instaItemText p {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #747474;
+}
+.instaItemText p a {
   text-decoration: none;
   color: red;
 }
@@ -95,9 +111,15 @@
 }
 .twitterText h1 {
   text-align: center;
+  color: #747474;
+  margin: 25px 0;
 }
 .twitterText p {
   text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  color: #747474;
 }
 .twitterText a {
   text-decoration: none;

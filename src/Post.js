@@ -14,23 +14,29 @@ class Post extends Component {
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
     }
+
     updateWindowDimensions() {
         this.setState({ width: window.innerWidth });
     }
 
     setColumnWidth = () => {
         const size = this.state.width;
-        if (size <= 735) {
+        if (size <= 575) {
             return '100%'
+        }
+        else if (size <= 735 && size > 575) {
+            return '90%'
         }
         else if (size > 735 && size <= 972) {
             return '50%'
         }
         else return '33.33%'
     }
-    something = () => {
+
+    updateLayout = () => {
         this.grid.updateLayout();
     };
+
     render() {
 
         return (
@@ -38,8 +44,8 @@ class Post extends Component {
                 <StackGrid
                     monitorImagesLoaded
                     columnWidth={this.setColumnWidth()}
-                    gutterWidth={30}
-                    gutterHeight={30}
+                    gutterWidth={70}
+                    gutterHeight={60}
                     gridRef={grid => this.grid = grid}
                 >
                     {
@@ -56,9 +62,6 @@ class Post extends Component {
 
                         })
                     }
-
-                    {/* < i aria-hidden='true' />
-                    <i aria-hidden='true' /> */}
                 </StackGrid>
             </div>
         );

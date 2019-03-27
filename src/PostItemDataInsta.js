@@ -21,8 +21,8 @@ class PostItemDataInsta extends Component {
                         </div>
                     }
                     <div className="instaItemText">
-                        <h4>{this.props.user_name}</h4>
-                        {this.linkifyUrl(this.props.caption)}
+                        <h3>{this.props.user_name}</h3>
+                        <p>{this.linkifyUrl(this.props.caption)}</p>
                     </div>
                 </a>
             </div>
