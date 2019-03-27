@@ -19,7 +19,9 @@ class PostItem extends Component {
                         link={item_data.link}
                         link_text={item_data.link_text}
                         image_url={item_data.image_url}
-                    />
+                    >
+                        {this.props.item_id}
+                    </PostItemDataManual>
 
                 }
                 {

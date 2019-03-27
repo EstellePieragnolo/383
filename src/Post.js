@@ -44,6 +44,7 @@ class Post extends Component {
         return (
             <div className="container">
                 <StackGrid
+                    className="containerGrid"
                     monitorImagesLoaded
                     columnWidth={this.setColumnWidth()}
                     gutterWidth={70}
@@ -53,7 +54,6 @@ class Post extends Component {
                     {
                         this.props.items.map(items => {
                             return (
-
                                 <PostItem key={items.item_id}
                                     item_id={items.item_id}
                                     item_data={items.item_data}
