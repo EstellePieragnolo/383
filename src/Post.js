@@ -7,9 +7,26 @@ class Post extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            width: 0
+            width: 0,
+            filterItems: ""
         };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+
+
+    updateState = (state) => () => {
+        this.setState({
+            ...this.state,
+            ...state
+        });
+    }
+
+    changeFilterItems = (service) => {
+        if (this.state.filterItems !== service) {
+            return this.updateState({ filterItems: service });
+        } else if (this.state.filterItems === service) {
+            return this.updateState({ filterItems: '' });
+        }
     }
 
     componentDidMount() {
@@ -43,6 +60,16 @@ class Post extends Component {
 
         return (
             <div className="container">
+                <div className="postItemsFilters">
+                    {/* <PostItemFilters
+                        service={this.changeFilterItems}
+                    /> */}
+                    <div>
+                        <div onClick={this.changeFilterItems('manual')}>Manual</div>
+                        <div onClick={this.changeFilterItems('insta')}>Insta</div>
+                        <div onClick={this.changeFilterItems('tweet')}>tweet</div>
+                    </div>
+                </div>
                 <StackGrid
                     className="containerGrid"
                     monitorImagesLoaded
@@ -58,7 +85,8 @@ class Post extends Component {
                                     item_id={items.item_id}
                                     item_data={items.item_data}
                                     service_name={items.service_name}
-                                    item_published={items.item_published} />
+                                    item_published={items.item_published}
+                                    service={this.state.filterItems} />
 
                             );
 

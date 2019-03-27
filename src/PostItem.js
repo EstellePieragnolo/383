@@ -4,6 +4,7 @@ import PostItemDataInsta from './PostItemDataInsta';
 import PostItemDataTwitter from './PostItemDataTwitter';
 import './_PostItem.scss';
 
+
 class PostItem extends Component {
 
     render() {

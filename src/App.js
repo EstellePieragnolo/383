@@ -37,7 +37,11 @@ class App extends Component {
 
     fetch('https://private-cc77e-aff.apiary-mock.com/posts?offset=1', { method: 'GET', mode: 'cors' })
       .then(response => response.json())
-      .then(data => this.setState({ items: this.state.items.concat(data.items.slice(this.state.startSlice, this.state.endSlice)) }))
+      .then(data => this.setState({
+        items: this.state.items.concat(
+          data.items.slice(this.state.startSlice, this.state.endSlice)
+        )
+      }))
       .catch(error => {
         console.log(error);
         this.setState({
