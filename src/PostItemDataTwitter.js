@@ -6,7 +6,7 @@ import './_PostItemDataTwitter.scss';
 class PostItemDataTwitter extends Component {
 
     linkifyUrl = (string) => {
-        return <Linkify properties={{ target: '_blank', style: { color: 'red' } }}>{string}</Linkify>
+        return <Linkify properties={{ target: '_blank', style: { color: 'rgb(212, 0, 0)' } }}>{string}</Linkify>
     }
 
     // getHashtag = (string) => {

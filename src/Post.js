@@ -6,7 +6,9 @@ import StackGrid from "react-stack-grid";
 class Post extends Component {
     constructor(props) {
         super(props);
-        this.state = { width: 0 };
+        this.state = {
+            width: 0
+        };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
