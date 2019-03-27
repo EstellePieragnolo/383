@@ -6,8 +6,15 @@ import './_PostItemDataTwitter.scss';
 class PostItemDataTwitter extends Component {
 
     linkifyUrl = (string) => {
-        return <Linkify>{string}</Linkify>
+        return <Linkify properties={{ target: '_blank', style: { color: 'red' } }}>{string}</Linkify>
     }
+
+    // getHashtag = (string) => {
+    //     string = string.replace(/[@]+[A-Za-z0-9_-]+/g, function (u) {
+    //         var username = u.replace("@", "")
+    //         return "http://twitter.com/" + username
+    //     });
+    // }
 
     render() {
         return (
@@ -17,7 +24,7 @@ class PostItemDataTwitter extends Component {
                 </div>
                 <div className="twitterText">
                     <h1>{this.props.userName}</h1>
-                    {this.linkifyUrl(this.props.tweet)}
+                    <p >{this.linkifyUrl(this.props.tweet)}</p>
                 </div>
             </div>
         );
