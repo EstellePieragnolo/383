@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "inline-style-prefixer": "^5.0.4",
+    "node-sass": "^4.11.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-linkify": "^0.2.2",
     "react-scripts": "2.1.8"
   },
   "scripts": {
