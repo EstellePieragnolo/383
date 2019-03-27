@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import instaLogo from './img/logo_insta.png';
-// import Linkify from 'react-linkify';
+import Linkify from 'react-linkify';
 import './_PostItemDataInsta.scss';
 
 class PostItemDataInsta extends Component {
-    // linkifyUrl = (string) => {
-    //     return <Linkify properties={{ target: '_blank', style: { color: 'red' } }}>{string}</Linkify>
-    // }
+    linkifyUrl = (string) => {
+        return <Linkify properties={{ target: '_blank', style: { color: 'red' } }}>{string}</Linkify>
+    }
     render() {
         return (
             <div className="insta">
@@ -22,7 +22,7 @@ class PostItemDataInsta extends Component {
                     }
                     <div className="instaItemText">
                         <h4>{this.props.user_name}</h4>
-                        {this.props.caption}
+                        {this.linkifyUrl(this.props.caption)}
                     </div>
                 </a>
             </div>
