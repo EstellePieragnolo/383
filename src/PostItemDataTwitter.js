@@ -9,6 +9,8 @@ class PostItemDataTwitter extends Component {
         const myString = string;
         const mentionRegex = /^(?!.*\bRT\b)(?:.+\s)?@\w+/i;
         const hashtagRegex = /^(?!.*\bRT\b)(?:.+\s)?#\w+/i;
+        const urlRegex = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/gm;
+
         const newString = myString.split(' ');
         return newString.map(s => {
             if (mentionRegex.test(s) === true) {
@@ -17,6 +19,9 @@ class PostItemDataTwitter extends Component {
             else if (hashtagRegex.test(s) === true) {
                 const hashtag = s.replace('#', '');
                 return <a href={`https://twitter.com/hashtag/${hashtag}`} target="_blank" rel="noopener noreferrer" className="twitterTextHashtag" >{s} </a>
+            }
+            else if (urlRegex.test(s) === true) {
+                return <a href={s} target="_blank" rel="noopener noreferrer" className="twitterTextHashtag" >{s} </a>
             }
             else return `${s} `
         })
