@@ -81,7 +81,8 @@ class App extends Component {
       <div className="app">
         <PostItemFilters
           filter={this.changeFilterItems}
-          numberItems={this.state.items.length} />
+          numberItems={this.state.items.length}
+          selected={this.state.filterItems} />
         <Post items={this.state.items} />
         {
           this.state.items.length < this.state.numberOfItems &&
