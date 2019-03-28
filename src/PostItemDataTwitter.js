@@ -5,9 +5,9 @@ import './_PostItemDataTwitter.scss';
 
 class PostItemDataTwitter extends Component {
 
-    linkifyUrl = (string) => {
-        return <Linkify properties={{ target: '_blank', style: { color: 'rgb(212, 0, 0)' } }}>{string}</Linkify>
-    }
+    // linkifyUrl = (string) => {
+    //     return <Linkify properties={{ target: '_blank', style: { color: 'rgb(212, 0, 0)' } }}>{string}</Linkify>
+    // }
 
     // getHashtag = (string) => {
     //     string = string.replace(/[@]+[A-Za-z0-9_-]+/g, function (u) {
@@ -15,6 +15,17 @@ class PostItemDataTwitter extends Component {
     //         return "http://twitter.com/" + username
     //     });
     // }
+
+    linkHashtagsMentions = (string) => {
+        const myString = string;
+        const regex = new RegExp(/^(?!.*\bRT\b)(?:.+\s)?@\w+/i);
+        const newString = myString.split(' ');
+        return newString.map(s => {
+            if (regex.test(s) === true) {
+                return <a href={`https://twitter.com/${s}`} target="_blank" rel="noopener noreferrer" className="twitterTextMention" >{s} </a>
+            } else return `${s} `
+        })
+    }
 
     render() {
         return (
@@ -24,7 +35,7 @@ class PostItemDataTwitter extends Component {
                 </div>
                 <div className="twitterText">
                     <h1>{this.props.userName}</h1>
-                    <p >{this.linkifyUrl(this.props.tweet)}</p>
+                    <p >{this.linkHashtagsMentions(this.props.tweet)}</p>
                 </div>
             </div>
         );

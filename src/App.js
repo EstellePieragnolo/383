@@ -18,7 +18,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://private-cc77e-aff.apiary-mock.com/posts?offset=1', { method: 'GET', mode: 'cors' })
+    fetch('https://private-cc77e-aff.apiary-mock.com/posts', {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      }, method: 'GET', mode: 'cors'
+    })
       .then(response => response.json())
       .then(data => this.setState({
         items: data.items.slice(this.state.startSlice, this.state.endSlice),
@@ -38,7 +43,7 @@ class App extends Component {
       startSlice: this.state.startSlice + 6,
       endSlice: this.state.endSlice + 6,
     })
-    fetch('https://private-cc77e-aff.apiary-mock.com/posts?offset=1', { method: 'GET', mode: 'cors' })
+    fetch('https://private-cc77e-aff.apiary-mock.com/posts', { method: 'GET', mode: 'cors' })
       .then(response => response.json())
       .then(data => this.setState({
         items: this.state.allItems.concat(
