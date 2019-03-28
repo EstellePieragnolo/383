@@ -51,7 +51,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.items.length)
     return (
       <div className="app">
         <Post items={this.state.items} />

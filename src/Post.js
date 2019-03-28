@@ -13,7 +13,6 @@ class Post extends Component {
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
-
     updateState = (state) => () => {
         this.setState({
             ...this.state,
@@ -23,15 +22,19 @@ class Post extends Component {
 
     changeFilterItems = (service) => {
         if (this.state.filterItems !== service) {
+
             return this.updateState({ filterItems: service });
         } else if (this.state.filterItems === service) {
-            return this.updateState({ filterItems: '' });
+            return this.updateState({
+                filterItems: ''
+            });
         }
     }
 
     componentDidMount() {
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
+
     }
 
     updateWindowDimensions() {
@@ -56,8 +59,37 @@ class Post extends Component {
         this.grid.updateLayout();
     };
 
-    render() {
+    withFilter = () => {
+        if (this.state.filterItems !== '') {
+            return this.props.items.filter(function (i, n) {
+                if (i.service_name === 'Manual' | i.service_name === 'Instagram') {
 
+                    return i
+                } else return null
+            });
+        } else return this.props.items
+    }
+
+
+    renderPost = () => {
+        const n = this.withFilter();
+        return n.map(items => {
+
+            return (
+                <PostItem key={items.item_id}
+                    item_id={items.item_id}
+                    item_data={items.item_data}
+                    service_name={items.service_name}
+                    item_published={items.item_published}
+                    service={this.state.filterItems} />
+
+            );
+        })
+    }
+
+    render() {
+        this.withFilter()
+        console.log(this.withFilter())
         return (
             <div className="container">
                 <div className="postItemsFilters">
@@ -65,9 +97,9 @@ class Post extends Component {
                         service={this.changeFilterItems}
                     /> */}
                     <div>
-                        <div onClick={this.changeFilterItems('manual')}>Manual</div>
-                        <div onClick={this.changeFilterItems('insta')}>Insta</div>
-                        <div onClick={this.changeFilterItems('tweet')}>tweet</div>
+                        <div onClick={this.changeFilterItems('Manual')}>Manual</div>
+                        <div onClick={this.changeFilterItems('Instagram')}>Insta</div>
+                        <div onClick={this.changeFilterItems('Twitter')}>tweet</div>
                     </div>
                 </div>
                 <StackGrid
@@ -79,18 +111,7 @@ class Post extends Component {
                     gridRef={grid => this.grid = grid}
                 >
                     {
-                        this.props.items.map(items => {
-                            return (
-                                <PostItem key={items.item_id}
-                                    item_id={items.item_id}
-                                    item_data={items.item_data}
-                                    service_name={items.service_name}
-                                    item_published={items.item_published}
-                                    service={this.state.filterItems} />
-
-                            );
-
-                        })
+                        this.renderPost()
                     }
                 </StackGrid>
             </div>
