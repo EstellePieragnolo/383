@@ -23,7 +23,7 @@
         }
     }
 
-    &Item {
+    &Picture {
         text-decoration: none;
 
         &:visited,
@@ -31,29 +31,28 @@
             color: black;
         }
 
-        &Picture {
-            img {
-                width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &Text {
+        h3 {
+            color: rgba(116, 116, 116, 1);
+            margin: 25px 0;
+        }
+
+        p {
+            font-size: 20px;
+            letter-spacing: 0.5px;
+            color: rgba(116, 116, 116, 1);
+
+            a {
+                text-decoration: none;
+                color: rgb(212, 0, 0);
             }
         }
 
-        &Text {
-            h3 {
-                color: rgba(116, 116, 116, 1);
-                margin: 25px 0;
-            }
-
-            p {
-                font-size: 20px;
-                letter-spacing: 0.5px;
-                color: rgba(116, 116, 116, 1);
-
-                a {
-                    text-decoration: none;
-                    color: rgb(212, 0, 0);
-                }
-            }
-
-        }
     }
 }

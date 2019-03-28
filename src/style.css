@@ -66,25 +66,25 @@
   width: 70%;
   margin-bottom: 12px;
 }
-.instaItem {
+.instaPicture {
   text-decoration: none;
 }
-.instaItem:visited, .instaItem:active {
+.instaPicture:visited, .instaPicture:active {
   color: black;
 }
-.instaItemPicture img {
+.instaPicture img {
   width: 100%;
 }
-.instaItemText h3 {
+.instaText h3 {
   color: #747474;
   margin: 25px 0;
 }
-.instaItemText p {
+.instaText p {
   font-size: 20px;
   letter-spacing: 0.5px;
   color: #747474;
 }
-.instaItemText p a {
+.instaText p a {
   text-decoration: none;
   color: #d40000;
 }

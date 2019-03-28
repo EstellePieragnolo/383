@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import instaLogo from './img/logo_insta.png';
-import Linkify from 'react-linkify';
 import './_PostItemDataInsta.scss';
 
 class PostItemDataInsta extends Component {
-    linkifyUrl = (string) => {
-        return <Linkify properties={{ target: '_blank', style: { color: 'red' } }}>{string}</Linkify>
+    linkHashtags = (string) => {
+        const myString = string;
+        const hashtagRegex = /^(?!.*\bRT\b)(?:.+\s)?#\w+/i;
+
+        const newString = myString.split(' ');
+        return newString.map(s => {
+
+            if (hashtagRegex.test(s) === true) {
+                const hashtag = s.replace('#', '');
+                return <a href={`https://www.instagram.com/explore/tags/${hashtag}`} target="_blank" rel="noopener noreferrer" className="twitterTextHashtag" >{s} </a>
+            }
+
+            else return `${s} `
+        })
     }
     render() {
         return (
@@ -13,18 +24,17 @@ class PostItemDataInsta extends Component {
                 <div className="instaLogo">
                     <img src={instaLogo} alt="" />
                 </div>
-                <a className="instaItem" href={this.props.link} target="_blank" rel="noopener noreferrer">
+                <a className="instaPicture" href={this.props.link} target="_blank" rel="noopener noreferrer">
                     {
                         this.props.image_url &&
-                        <div className="instaItemPicture">
-                            <img src="https://picsum.photos/400" alt="InstagramPicturePost" />
-                        </div>
+                        <img src="https://picsum.photos/400" alt="InstagramPicturePost" />
                     }
-                    <div className="instaItemText">
-                        <h3>{this.props.user_name}</h3>
-                        <p>{this.linkifyUrl(this.props.caption)}</p>
-                    </div>
                 </a>
+                <div className="instaText">
+                    <h3>{this.props.user_name}</h3>
+                    <p>{this.linkHashtags(this.props.caption)}</p>
+                </div>
+
             </div>
         );
     }
