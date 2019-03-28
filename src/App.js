@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Post from './Post';
 import './_App.scss';
+import PostItemFilters from './PostItemFilters';
 
 class App extends Component {
   constructor(props) {
@@ -14,13 +15,6 @@ class App extends Component {
       filterItems: "",
       allItems: []
     }
-  }
-
-  updateState = (state) => () => {
-    this.setState({
-      ...this.state,
-      ...state
-    });
   }
 
   componentDidMount() {
@@ -44,7 +38,6 @@ class App extends Component {
       startSlice: this.state.startSlice + 6,
       endSlice: this.state.endSlice + 6,
     })
-
     fetch('https://private-cc77e-aff.apiary-mock.com/posts?offset=1', { method: 'GET', mode: 'cors' })
       .then(response => response.json())
       .then(data => this.setState({
@@ -61,13 +54,14 @@ class App extends Component {
           error: true
         });
       });
+
   }
 
   changeFilterItems = (service) => () => {
     if (this.state.filterItems !== service) {
       this.setState({ filterItems: service });
       this.setState({
-        items: [...this.state.items.filter(function (i, n) {
+        items: [...this.state.allItems.filter(function (i, n) {
           if (i.service_name === service) {
             return i
           } else return null
@@ -85,13 +79,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="appItemsFilters">
-          <div>
-            <div onClick={this.changeFilterItems('Manual')}>Manual</div>
-            <div onClick={this.changeFilterItems('Instagram')}>Insta</div>
-            <div onClick={this.changeFilterItems('Twitter')}>tweet</div>
-          </div>
-        </div>
+        <PostItemFilters filter={this.changeFilterItems} />
         <Post items={this.state.items} />
         {
           this.state.items.length < this.state.numberOfItems &&
