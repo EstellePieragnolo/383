@@ -20,14 +20,14 @@ class PostItemFilters extends Component {
                             this.props.selected === 'Instagram' ? 'Selected' : 'Unselected'
                         )}
                     >
-                        Insta
+                        Instagram
                     </div>
                     <div onClick={this.props.filter('Twitter')}
                         className={'filterItemButton' + (
                             this.props.selected === 'Twitter' ? 'Selected' : 'Unselected'
                         )}
                     >
-                        tweet
+                        Twitter
                     </div>
                 </div>
                 <div className="filterCount"> Number of posts : {this.props.numberItems}</div>
