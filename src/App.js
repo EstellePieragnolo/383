@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Post from './Post';
 import './_App.scss';
 import PostItemFilters from './PostItemFilters';
+import Slider from './Slider';
 
 class App extends Component {
   constructor(props) {
@@ -84,6 +85,9 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+        <div>
+          <Slider />
+        </div>
         <PostItemFilters
           filter={this.changeFilterItems}
           numberItems={this.state.items.length}
