@@ -1,0 +1,58 @@
+.filter {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 0 70px;
+    color: rgba(0, 0, 0, 0.8);
+
+    &Item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px 0 30px;
+
+        &ButtonUnselected {
+            text-align: center;
+            border: 1px solid #ebebeb;
+            padding: 20px;
+            width: 200px;
+            border-radius: 5px;
+            margin: 0 50px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        &ButtonSelected {
+            text-align: center;
+            border: 1px solid #ebebeb;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 200px;
+            border-radius: 5px;
+            margin: 0 50px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    &Count {
+        text-align: center;
+    }
+
+    &Anchor {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        padding: 10px;
+        margin: 15px;
+        text-align: center;
+        border: 1px solid #bbbaba;
+        background-color: #ebebeb;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+}

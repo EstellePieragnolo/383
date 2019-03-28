@@ -13,11 +13,13 @@ class Slider extends Component {
 
     componentDidMount() {
         this.sliderImages();
-        this.actionSlider();
+        this.action = setInterval(() => {
+            this.next()
+        }, 4000);
     }
 
     componentWillUnmount() {
-        clearInterval(this.next);
+        clearInterval(this.action);
     }
 
     sliderImages = () => {
@@ -28,15 +30,7 @@ class Slider extends Component {
         return this.state.images
     }
 
-    actionSlider = () => {
-        setInterval(() => {
-            this.next()
-        }, 3000);
-    }
-
-
     next = () => {
-        console.log('set')
         if (this.state.index < this.state.images.length - 1) {
             this.setState({
                 index: this.state.index + 1
