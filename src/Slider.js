@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './_Slider.scss';
 
 class Slider extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class Slider extends Component {
     }
 
     sliderImages = () => {
-        const img = ['https://picsum.photos/200', 'https://picsum.photos/400/?random', 'https://picsum.photos/g/200'];
+        const img = ['https://picsum.photos/500', 'https://picsum.photos/500/?random', 'https://picsum.photos/g/500'];
         this.setState({
             images: [...img]
         });
