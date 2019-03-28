@@ -41,10 +41,10 @@ class App extends Component {
     fetch('https://private-cc77e-aff.apiary-mock.com/posts?offset=1', { method: 'GET', mode: 'cors' })
       .then(response => response.json())
       .then(data => this.setState({
-        items: this.state.items.concat(
+        items: this.state.allItems.concat(
           data.items.slice(this.state.startSlice, this.state.endSlice)
         ),
-        allItems: this.state.items.concat(
+        allItems: this.state.allItems.concat(
           data.items.slice(this.state.startSlice, this.state.endSlice)
         )
       }))
@@ -79,7 +79,9 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <PostItemFilters filter={this.changeFilterItems} />
+        <PostItemFilters
+          filter={this.changeFilterItems}
+          numberItems={this.state.items.length} />
         <Post items={this.state.items} />
         {
           this.state.items.length < this.state.numberOfItems &&
