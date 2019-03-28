@@ -6,23 +6,37 @@ class Slider extends Component {
         super(props);
         this.state = {
             images: [],
-            index: 0
+            index: 0,
+            play: true
         }
     }
 
     componentDidMount() {
-        this.sliderImages()
+        this.sliderImages();
+        this.actionSlider();
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.next);
     }
 
     sliderImages = () => {
-        const img = ['https://picsum.photos/500', 'https://picsum.photos/500/?random', 'https://picsum.photos/g/500'];
+        const img = ['https://picsum.photos/1000', 'https://picsum.photos/1000?image=1024', 'https://picsum.photos/g/1000'];
         this.setState({
             images: [...img]
         });
         return this.state.images
     }
 
+    actionSlider = () => {
+        setInterval(() => {
+            this.next()
+        }, 3000);
+    }
+
+
     next = () => {
+        console.log('set')
         if (this.state.index < this.state.images.length - 1) {
             this.setState({
                 index: this.state.index + 1
@@ -31,6 +45,7 @@ class Slider extends Component {
         else this.setState({
             index: 0
         })
+
     }
 
     previous = () => {
@@ -47,15 +62,14 @@ class Slider extends Component {
     render() {
         const { images, index } = this.state;
         return (
-            <div>
+            <div className="slider">
 
-                <span onClick={this.previous}>Previous</span>
+                <div className="sliderImages" style={{ backgroundImage: `url(${images[index]})` }}>
+                    <span className="sliderImagesControlerPrevious" onClick={this.previous} />
+                    <span className="sliderImagesControlerNext" onClick={this.next} />
 
-                <div>
-                    <img src={images[index]} alt="" />
                 </div>
-
-                <span onClick={this.next}>Next</span>
+                <span className="sliderOverlay" style={{ backgroundImage: `url(${images[index]})` }} />
 
             </div>
         )

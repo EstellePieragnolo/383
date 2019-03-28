@@ -1,0 +1,60 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+    background-color: gray;
+
+    &Overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: -45px;
+        background-size: cover;
+        background-position: center;
+        filter: blur(20px);
+        z-index: 0;
+        transform: scale(1.2);
+        opacity: 0.7;
+        transition: background-image 0.8s ease-out;
+    }
+
+    &Images {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 60vh;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 10;
+        margin: 40px 0;
+        transition: background-image 0.8s ease-out;
+
+        &Controler {
+            color: white;
+            position: relative;
+
+            &Next {
+                width: 37px;
+                height: 37px;
+                margin-right: 30px;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.26);
+                cursor: pointer;
+            }
+
+            &Previous {
+                width: 37px;
+                height: 37px;
+                margin-left: 30px;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.26);
+                cursor: pointer;
+            }
+        }
+    }
+}
