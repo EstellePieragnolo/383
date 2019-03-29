@@ -10,7 +10,7 @@ class PostItemDataManual extends Component {
                     <div className="manualHeaderLogo">
                         <p>AFF</p>
                     </div>
-                    <p>{this.props.date}</p>
+                    <p className="manualHeaderDate">{this.props.date}</p>
                 </div>
 
                 {

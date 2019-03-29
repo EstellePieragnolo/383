@@ -34,7 +34,7 @@ class PostItemDataTwitter extends Component {
                     <div className="twitterHeaderLogo">
                         <img src={twitterLogo} alt="" />
                     </div>
-                    <p>{this.props.date}</p>
+                    <p className="twitterHeaderDate">{this.props.date}</p>
                 </div>
 
 

@@ -25,7 +25,7 @@ class PostItemDataInsta extends Component {
                     <div className="instaHeaderLogo">
                         <img src={instaLogo} alt="" />
                     </div>
-                    <p>{this.props.date}</p>
+                    <p className="instaHeaderDate">{this.props.date}</p>
                 </div>
                 <a className="instaPicture" href={this.props.link} target="_blank" rel="noopener noreferrer">
                     {
