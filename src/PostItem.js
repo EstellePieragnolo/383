@@ -14,7 +14,9 @@ class PostItem extends Component {
     }
 
     date = (date) => {
-        const newDate = new Date(date);
+        const d = date.split(/[- :]/);
+        const arrayDate = new Date(d[0], d[1] - 1, d[2], d[3], d[4], d[5]);
+        const newDate = new Date(arrayDate);
         const monthNames = [
             "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
         ];

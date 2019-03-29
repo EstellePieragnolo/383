@@ -41,14 +41,9 @@ class App extends Component {
           error: true
         });
       });
-
-
   }
 
   loadmore = () => {
-    // this.setState({
-
-    // })
     this.setState({
       startSlice: this.state.startSlice + 6,
       endSlice: this.state.endSlice + 6,
@@ -87,9 +82,9 @@ class App extends Component {
           } else return null
         })]
       })
-
       return this.state.items;
-    } else if (this.state.filterItems === service) {
+    }
+    else if (this.state.filterItems === service) {
       this.setState({ filterItems: '' });
       this.setState({ items: [...this.state.allItems] })
       return this.state.items
