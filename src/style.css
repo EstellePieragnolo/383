@@ -52,7 +52,7 @@
   font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .manual {
     padding: 20px 15px;
   }
@@ -69,6 +69,9 @@
   }
   .manualText h3 {
     font-size: 20px;
+  }
+  .manualText p {
+    font-size: 18px;
   }
   .manualText a {
     font-size: 18px;
@@ -129,7 +132,7 @@
   color: #d40000;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .insta {
     padding: 20px 15px;
   }
@@ -196,6 +199,28 @@
   color: #d40000;
 }
 
+@media screen and (max-width: 1024px) {
+  .twitter {
+    padding: 20px 15px;
+  }
+  .twitterHeaderLogo {
+    width: 40px;
+    height: 55px;
+    left: 15px;
+  }
+  .twitterHeader p {
+    font-size: 14px;
+  }
+  .twitterHeaderDate {
+    font-size: 14px;
+  }
+  .twitterText h1 {
+    font-size: 20px;
+  }
+  .twitterText p {
+    font-size: 18px;
+  }
+}
 body {
   margin: 0 !important;
 }

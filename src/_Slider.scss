@@ -76,3 +76,22 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    .slider {
+        &Overlay {}
+
+        &Images {
+            margin: 0;
+
+            &Controler {
+
+                &Next,
+                &Previous {
+                    display: none;
+                }
+            }
+        }
+    }
+}

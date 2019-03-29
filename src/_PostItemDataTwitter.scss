@@ -56,3 +56,37 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .twitter {
+        padding: 20px 15px;
+
+        &Header {
+            &Logo {
+
+                width: 40px;
+                height: 55px;
+                left: 15px;
+            }
+
+            p {
+                font-size: $tiny;
+            }
+
+            &Date {
+                font-size: $tiny;
+            }
+        }
+
+        &Text {
+            h1 {
+                font-size: $medium;
+            }
+
+            p {
+                font-size: $small;
+
+            }
+        }
+    }
+}

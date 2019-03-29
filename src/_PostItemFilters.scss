@@ -69,7 +69,28 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 577px) and (max-width: 1200px) {
+    .filter {
+        &Item {
+            justify-content: center;
+
+            &ButtonUnselected,
+            &ButtonSelected {
+                width: 125px;
+                margin: 0 30px;
+                font-size: $small;
+                padding: 20px;
+            }
+        }
+
+        &Count {
+            text-align: center;
+            font-size: $tiny;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
     .filter {
         &Item {
             justify-content: space-around;

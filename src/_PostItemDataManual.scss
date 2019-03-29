@@ -60,7 +60,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .manual {
         padding: 20px 15px;
 
@@ -84,6 +84,10 @@
         &Text {
             h3 {
                 font-size: $medium;
+            }
+
+            p {
+                font-size: $small;
             }
 
             a {
