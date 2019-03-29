@@ -11,7 +11,12 @@
   position: relative;
   padding: 30px 40px;
 }
-.manualLogo {
+.manualHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.manualHeaderLogo {
   position: absolute;
   display: flex;
   align-items: flex-end;
@@ -23,7 +28,7 @@
   top: -20px;
   left: 40px;
 }
-.manualLogo p {
+.manualHeaderLogo p {
   color: white;
   font-size: 20px;
 }
@@ -50,7 +55,12 @@
   position: relative;
   padding: 30px 40px;
 }
-.instaLogo {
+.instaHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.instaHeaderLogo {
   position: absolute;
   display: flex;
   align-items: flex-end;
@@ -62,7 +72,7 @@
   top: -20px;
   left: 40px;
 }
-.instaLogo img {
+.instaHeaderLogo img {
   width: 70%;
   margin-bottom: 12px;
 }
@@ -96,7 +106,12 @@
   justify-content: center;
   padding: 30px 40px;
 }
-.twitterLogo {
+.twitterHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.twitterHeaderLogo {
   position: absolute;
   display: flex;
   align-items: flex-end;
@@ -107,7 +122,7 @@
   top: -20px;
   left: 40px;
 }
-.twitterLogo img {
+.twitterHeaderLogo img {
   width: 100%;
 }
 .twitterText h1 {

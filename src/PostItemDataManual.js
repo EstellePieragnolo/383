@@ -6,9 +6,13 @@ class PostItemDataManual extends Component {
     render() {
         return (
             <div className="manual">
-                <div className="manualLogo">
-                    <p>AFF</p>
+                <div className="manualHeader">
+                    <div className="manualHeaderLogo">
+                        <p>AFF</p>
+                    </div>
+                    <p>{this.props.date}</p>
                 </div>
+
                 {
                     this.props.image_url &&
                     <div className="manualPicture">

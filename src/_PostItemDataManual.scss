@@ -5,21 +5,27 @@
     position: relative;
     padding: 30px 40px;
 
-    &Logo {
-        position: absolute;
+    &Header {
         display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        background-color: red;
-        border-radius: 5px;
-        width: 60px;
-        height: 75px;
-        top: -20px;
-        left: 40px;
+        flex-direction: row;
+        justify-content: space-around;
 
-        p {
-            color: white;
-            font-size: 20px;
+        &Logo {
+            position: absolute;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background-color: red;
+            border-radius: 5px;
+            width: 60px;
+            height: 75px;
+            top: -20px;
+            left: 40px;
+
+            p {
+                color: white;
+                font-size: 20px;
+            }
         }
     }
 

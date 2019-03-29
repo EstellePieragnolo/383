@@ -30,9 +30,14 @@ class PostItemDataTwitter extends Component {
     render() {
         return (
             <div className="twitter">
-                <div className="twitterLogo">
-                    <img src={twitterLogo} alt="" />
+                <div className="twitterHeader">
+                    <div className="twitterHeaderLogo">
+                        <img src={twitterLogo} alt="" />
+                    </div>
+                    <p>{this.props.date}</p>
                 </div>
+
+
                 <div className="twitterText">
                     <h1>{this.props.userName}</h1>
                     <p >{this.linkHashtagsMentions(this.props.tweet)}</p>

@@ -20,9 +20,8 @@ class PostItem extends Component {
                         link={item_data.link}
                         link_text={item_data.link_text}
                         image_url={item_data.image_url}
-                    >
-                        {this.props.item_id}
-                    </PostItemDataManual>
+                        date={this.props.date}
+                    />
 
                 }
                 {
@@ -32,7 +31,7 @@ class PostItem extends Component {
                         link={item_data.link}
                         caption={item_data.caption}
                         user_name={item_data.user.username}
-                        image_url={item_data.image.medium}
+                        image_url={item_data.image.medium} date={this.props.date}
                     />
 
                 }
@@ -41,7 +40,7 @@ class PostItem extends Component {
 
                     <PostItemDataTwitter
                         tweet={item_data.tweet}
-                        userName={item_data.user.username}
+                        userName={item_data.user.username} date={this.props.date}
                     />
 
 

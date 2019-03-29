@@ -5,20 +5,27 @@
     justify-content: center;
     padding: 30px 40px;
 
-    &Logo {
-        position: absolute;
+    &Header {
         display: flex;
-        align-items: flex-end;
-        background-color: black;
-        border-radius: 5px;
-        width: 60px;
-        height: 75px;
-        top: -20px;
-        left: 40px;
+        flex-direction: row;
+        justify-content: space-around;
 
-        img {
-            width: 100%;
+        &Logo {
+            position: absolute;
+            display: flex;
+            align-items: flex-end;
+            background-color: black;
+            border-radius: 5px;
+            width: 60px;
+            height: 75px;
+            top: -20px;
+            left: 40px;
+
+            img {
+                width: 100%;
+            }
         }
+
     }
 
     &Text {

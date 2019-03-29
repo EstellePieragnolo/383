@@ -60,7 +60,8 @@ class Post extends Component {
                                     item_data={items.item_data}
                                     service_name={items.service_name}
                                     item_published={items.item_published}
-                                    service={this.state.filterItems} />
+                                    service={this.state.filterItems}
+                                    date={items.item_published} />
 
                             );
                         })

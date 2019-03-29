@@ -27,9 +27,13 @@ class App extends Component {
     })
       .then(response => response.json())
       .then(data => this.setState({
-        items: data.items.slice(this.state.startSlice, this.state.endSlice),
+        items: data.items.sort((a, b) => {
+          return new Date(b.item_published) - new Date(a.item_published)
+        }).slice(this.state.startSlice, this.state.endSlice),
         numberOfItems: data.items.length,
-        allItems: data.items.slice(this.state.startSlice, this.state.endSlice)
+        allItems: data.items.sort((a, b) => {
+          return new Date(b.item_published) - new Date(a.item_published)
+        }).slice(this.state.startSlice, this.state.endSlice)
       }))
       .catch(error => {
         console.log(error);
@@ -37,21 +41,31 @@ class App extends Component {
           error: true
         });
       });
+
+
   }
 
   loadmore = () => {
+    // this.setState({
+
+    // })
     this.setState({
       startSlice: this.state.startSlice + 6,
       endSlice: this.state.endSlice + 6,
     })
+
     fetch('https://private-cc77e-aff.apiary-mock.com/posts', { method: 'GET', mode: 'cors' })
       .then(response => response.json())
       .then(data => this.setState({
         items: this.state.allItems.concat(
-          data.items.slice(this.state.startSlice, this.state.endSlice)
+          data.items.sort((a, b) => {
+            return new Date(b.item_published) - new Date(a.item_published)
+          }).slice(this.state.startSlice, this.state.endSlice)
         ),
         allItems: this.state.allItems.concat(
-          data.items.slice(this.state.startSlice, this.state.endSlice)
+          data.items.sort((a, b) => {
+            return new Date(b.item_published) - new Date(a.item_published)
+          }).slice(this.state.startSlice, this.state.endSlice)
         )
       }))
       .catch(error => {
@@ -67,7 +81,7 @@ class App extends Component {
     if (this.state.filterItems !== service) {
       this.setState({ filterItems: service });
       this.setState({
-        items: [...this.state.allItems.filter(function (i, n) {
+        items: [...this.state.allItems.filter((i, n) => {
           if (i.service_name === service) {
             return i
           } else return null
