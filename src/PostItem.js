@@ -6,6 +6,24 @@ import './_PostItem.scss';
 
 
 class PostItem extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            newDate: ''
+        }
+    }
+
+    date = (date) => {
+        const newDate = new Date(date);
+        const monthNames = [
+            "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+        ];
+        const month = newDate.getMonth();
+        const day = newDate.getDate();
+        const year = newDate.getFullYear();
+
+        return day + " " + monthNames[month] + " " + year;
+    }
 
     render() {
         const { item_data } = this.props;
@@ -20,7 +38,7 @@ class PostItem extends Component {
                         link={item_data.link}
                         link_text={item_data.link_text}
                         image_url={item_data.image_url}
-                        date={this.props.date}
+                        date={this.date(this.props.date)}
                     />
 
                 }
@@ -31,7 +49,7 @@ class PostItem extends Component {
                         link={item_data.link}
                         caption={item_data.caption}
                         user_name={item_data.user.username}
-                        image_url={item_data.image.medium} date={this.props.date}
+                        image_url={item_data.image.medium} date={this.date(this.props.date)}
                     />
 
                 }
@@ -40,7 +58,7 @@ class PostItem extends Component {
 
                     <PostItemDataTwitter
                         tweet={item_data.tweet}
-                        userName={item_data.user.username} date={this.props.date}
+                        userName={item_data.user.username} date={this.date(this.props.date)}
                     />
 
 
