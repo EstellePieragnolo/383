@@ -74,19 +74,21 @@ class App extends Component {
 
   changeFilterItems = (service) => () => {
     if (this.state.filterItems !== service) {
-      this.setState({ filterItems: service });
       this.setState({
-        items: [...this.state.allItems.filter((i, n) => {
+        filterItems: service,
+        items: [...this.state.allItems.filter((i) => {
           if (i.service_name === service) {
             return i
           } else return null
         })]
-      })
+      });
       return this.state.items;
     }
     else if (this.state.filterItems === service) {
-      this.setState({ filterItems: '' });
-      this.setState({ items: [...this.state.allItems] })
+      this.setState({
+        filterItems: '',
+        items: [...this.state.allItems]
+      });
       return this.state.items
     }
   }

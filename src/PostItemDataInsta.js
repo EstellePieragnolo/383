@@ -3,6 +3,7 @@ import instaLogo from './img/logo_insta.png';
 import './_PostItemDataInsta.scss';
 
 class PostItemDataInsta extends Component {
+
     linkHashtags = (string) => {
         const myString = string;
         const hashtagRegex = /^(?!.*\bRT\b)(?:.+\s)?#\w+/i;
@@ -12,12 +13,15 @@ class PostItemDataInsta extends Component {
 
             if (hashtagRegex.test(s) === true) {
                 const hashtag = s.replace('#', '');
-                return <a href={`https://www.instagram.com/explore/tags/${hashtag}`} target="_blank" rel="noopener noreferrer" className="twitterTextHashtag" >{s} </a>
+                return <a href={`https://www.instagram.com/explore/tags/${hashtag}`}
+                    key={s}
+                    target="_blank" rel="noopener noreferrer"
+                    className="twitterTextHashtag" >{s} </a>
             }
-
             else return `${s} `
         })
     }
+
     render() {
         return (
             <div className="insta">

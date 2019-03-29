@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import twitterLogo from './img/logo_twitter.png';
-import Linkify from 'react-linkify';
 import './_PostItemDataTwitter.scss';
 
 class PostItemDataTwitter extends Component {
@@ -14,14 +13,24 @@ class PostItemDataTwitter extends Component {
         const newString = myString.split(' ');
         return newString.map(s => {
             if (mentionRegex.test(s) === true) {
-                return <a href={`https://twitter.com/${s}`} target="_blank" rel="noopener noreferrer" className="twitterTextMention" >{s} </a>
+                return <a href={`https://twitter.com/${s}`}
+                    key={s}
+                    target="_blank" rel="noopener noreferrer"
+                    className="twitterTextMention" >{s} </a>
             }
             else if (hashtagRegex.test(s) === true) {
                 const hashtag = s.replace('#', '');
-                return <a href={`https://twitter.com/hashtag/${hashtag}`} target="_blank" rel="noopener noreferrer" className="twitterTextHashtag" >{s} </a>
+                return <a href={`https://twitter.com/hashtag/${hashtag}`}
+                    key={s}
+                    target="_blank" rel="noopener noreferrer"
+                    className="twitterTextHashtag" >{s} </a>
             }
             else if (urlRegex.test(s) === true) {
-                return <a href={s} target="_blank" rel="noopener noreferrer" className="twitterTextHashtag" >{s} </a>
+                return <a href={s}
+                    key={s}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="twitterTextHashtag" >{s} </a>
             }
             else return `${s} `
         })

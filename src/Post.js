@@ -53,7 +53,6 @@ class Post extends Component {
                 >
                     {
                         this.props.items.map(items => {
-
                             return (
                                 <PostItem key={items.item_id}
                                     item_id={items.item_id}
