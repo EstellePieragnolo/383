@@ -21,7 +21,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background-color: red;
+  background-color: #d40000;
   border-radius: 5px;
   width: 60px;
   height: 75px;
@@ -52,6 +52,28 @@
   font-size: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .manual {
+    padding: 20px 15px;
+  }
+  .manualHeaderLogo {
+    width: 40px;
+    height: 55px;
+    left: 15px;
+  }
+  .manualHeader p {
+    font-size: 14px;
+  }
+  .manualHeaderDate {
+    font-size: 14px;
+  }
+  .manualText h3 {
+    font-size: 20px;
+  }
+  .manualText a {
+    font-size: 18px;
+  }
+}
 .insta {
   display: flex;
   flex-direction: column;
@@ -107,6 +129,26 @@
   color: #d40000;
 }
 
+@media screen and (max-width: 768px) {
+  .insta {
+    padding: 20px 15px;
+  }
+  .instaHeaderLogo {
+    width: 40px;
+    height: 55px;
+    top: -20px;
+    left: 15px;
+  }
+  .instaHeaderDate {
+    font-size: 14px;
+  }
+  .instaText h3 {
+    font-size: 20px;
+  }
+  .instaText p {
+    font-size: 18px;
+  }
+}
 .twitter {
   position: relative;
   display: flex;

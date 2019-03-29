@@ -108,7 +108,7 @@ class App extends Component {
             <div className="appLoadmoreButton" onClick={this.loadmore}>LoadMore</div>
           </div>
         }
-      </div >
+      </div>
     );
   }
 }

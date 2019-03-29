@@ -1,3 +1,5 @@
+@import './vars';
+
 .insta {
     display: flex;
     flex-direction: column;
@@ -15,7 +17,7 @@
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            background-color: black;
+            background-color: $black;
             border-radius: 5px;
             width: 60px;
             height: 75px;
@@ -29,8 +31,9 @@
         }
 
         &Date {
-            color: rgba(116, 116, 116, 1);
-            font-size: 16px;
+            color: $fontGrey;
+            font-size: $mini;
+            ;
         }
     }
 
@@ -50,20 +53,50 @@
 
     &Text {
         h3 {
-            color: rgba(116, 116, 116, 1);
+            color: $fontGrey;
             margin: 25px 0;
         }
 
         p {
-            font-size: 20px;
+            font-size: $medium;
             letter-spacing: 0.5px;
-            color: rgba(116, 116, 116, 1);
+            color: $fontGrey;
 
             a {
                 text-decoration: none;
-                color: rgb(212, 0, 0);
+                color: $red;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .insta {
+        padding: 20px 15px;
+
+        &Header {
+            &Logo {
+
+                width: 40px;
+                height: 55px;
+                top: -20px;
+                left: 15px;
+            }
+
+            &Date {
+                font-size: $tiny;
             }
         }
 
+        &Text {
+            h3 {
+                font-size: $medium;
+            }
+
+            p {
+                font-size: $small;
+            }
+
+        }
     }
 }

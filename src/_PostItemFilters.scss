@@ -1,3 +1,5 @@
+@import './vars';
+
 .filter {
     font-family: 'Open Sans', sans-serif;
     display: flex;
@@ -14,12 +16,12 @@
 
         &ButtonUnselected {
             text-align: center;
-            border: 1px solid #ebebeb;
+            border: 1px solid $lightGrey;
             padding: 20px;
             width: 200px;
             border-radius: 5px;
             margin: 0 50px;
-            font-size: 20px;
+            font-size: $medium;
             cursor: pointer;
 
             &:hover {
@@ -29,13 +31,13 @@
 
         &ButtonSelected {
             text-align: center;
-            border: 1px solid #ebebeb;
+            border: 1px solid $lightGrey;
             background-color: rgba(0, 0, 0, 0.1);
             padding: 20px;
             width: 200px;
             border-radius: 5px;
             margin: 0 50px;
-            font-size: 20px;
+            font-size: $medium;
             cursor: pointer;
 
             &:hover {
@@ -46,6 +48,7 @@
 
     &Count {
         text-align: center;
+        font-size: $small;
     }
 
     &Anchor {
@@ -58,9 +61,31 @@
         margin: 15px;
         text-align: center;
         border: 1px solid #bbbaba;
-        background-color: #ebebeb;
+        background-color: $lightGrey;
         border-radius: 5px;
         cursor: pointer;
 
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .filter {
+        &Item {
+            justify-content: space-around;
+
+            &ButtonUnselected,
+            &ButtonSelected {
+                width: 75px;
+                margin: 0;
+                font-size: $tiny;
+                padding: 8px;
+            }
+        }
+
+        &Count {
+            text-align: center;
+            font-size: 12px;
+        }
     }
 }

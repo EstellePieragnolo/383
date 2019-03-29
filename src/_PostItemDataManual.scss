@@ -1,3 +1,5 @@
+@import './vars';
+
 .manual {
     display: flex;
     flex-direction: column;
@@ -15,7 +17,8 @@
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            background-color: red;
+            background-color: $red;
+            ;
             border-radius: 5px;
             width: 60px;
             height: 75px;
@@ -24,13 +27,13 @@
 
             p {
                 color: white;
-                font-size: 20px;
+                font-size: $medium;
             }
         }
 
         &Date {
-            color: rgba(116, 116, 116, 1);
-            font-size: 16px;
+            color: $fontGrey;
+            font-size: $mini;
         }
     }
 
@@ -42,17 +45,51 @@
 
     &Text {
         p {
-            font-size: 20px;
+            font-size: $medium;
             letter-spacing: 0.5px;
             line-height: 1.3;
-            color: rgba(116, 116, 116, 1);
+            color: $fontGrey;
             margin-top: 25px;
         }
 
         a {
             text-decoration: none;
-            color: rgb(212, 0, 0);
-            font-size: 20px;
+            color: $red;
+            font-size: $medium;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .manual {
+        padding: 20px 15px;
+
+        &Header {
+            &Logo {
+
+                width: 40px;
+                height: 55px;
+                left: 15px;
+            }
+
+            p {
+                font-size: $tiny;
+            }
+
+            &Date {
+                font-size: $tiny;
+            }
+        }
+
+        &Text {
+            h3 {
+                font-size: $medium;
+            }
+
+            a {
+                font-size: $small;
+            }
+
         }
     }
 }

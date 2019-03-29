@@ -1,4 +1,12 @@
+@import './vars';
+
 .container {
     margin: 40px;
     font-family: 'Open Sans', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 40px 20px;
+    }
 }

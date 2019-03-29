@@ -1,3 +1,5 @@
+@import './vars';
+
 .app {
     font-family: 'Open Sans', sans-serif;
 
@@ -14,12 +16,13 @@
             align-items: center;
             color: rgba(0, 0, 0, 0.8);
             text-align: center;
-            border: 2px solid #ebebeb;
+            border: 2px solid $lightGrey;
+            ;
             width: 350px;
             height: 65px;
             border-radius: 5px;
             margin: 0 50px;
-            font-size: 20px;
+            font-size: $medium;
             cursor: pointer;
 
             &:hover {
