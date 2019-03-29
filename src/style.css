@@ -1,0 +1,228 @@
+.postItems {
+  width: 100%;
+  border: 2px solid #ebebeb;
+  border-radius: 5px;
+}
+
+.manual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 30px 40px;
+}
+.manualHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.manualHeaderLogo {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #d40000;
+  border-radius: 5px;
+  width: 60px;
+  height: 75px;
+  top: -20px;
+  left: 40px;
+}
+.manualHeaderLogo p {
+  color: white;
+  font-size: 20px;
+}
+.manualHeaderDate {
+  color: #747474;
+  font-size: 16px;
+}
+.manualPicture img {
+  width: 100%;
+}
+.manualText p {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  color: #747474;
+  margin-top: 25px;
+}
+.manualText a {
+  text-decoration: none;
+  color: #d40000;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .manual {
+    padding: 20px 15px;
+  }
+  .manualHeaderLogo {
+    width: 40px;
+    height: 55px;
+    left: 15px;
+  }
+  .manualHeader p {
+    font-size: 14px;
+  }
+  .manualHeaderDate {
+    font-size: 14px;
+  }
+  .manualText h3 {
+    font-size: 20px;
+  }
+  .manualText p {
+    font-size: 18px;
+  }
+  .manualText a {
+    font-size: 18px;
+  }
+}
+.insta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 30px 40px;
+}
+.instaHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.instaHeaderLogo {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: black;
+  border-radius: 5px;
+  width: 60px;
+  height: 75px;
+  top: -20px;
+  left: 40px;
+}
+.instaHeaderLogo img {
+  width: 70%;
+  margin-bottom: 12px;
+}
+.instaHeaderDate {
+  color: #747474;
+  font-size: 16px;
+}
+.instaPicture {
+  text-decoration: none;
+}
+.instaPicture:visited, .instaPicture:active {
+  color: black;
+}
+.instaPicture img {
+  width: 100%;
+}
+.instaText h3 {
+  color: #747474;
+  margin: 25px 0;
+}
+.instaText p {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #747474;
+}
+.instaText p a {
+  text-decoration: none;
+  color: #d40000;
+}
+
+@media screen and (max-width: 1024px) {
+  .insta {
+    padding: 20px 15px;
+  }
+  .instaHeaderLogo {
+    width: 40px;
+    height: 55px;
+    top: -20px;
+    left: 15px;
+  }
+  .instaHeaderDate {
+    font-size: 14px;
+  }
+  .instaText h3 {
+    font-size: 20px;
+  }
+  .instaText p {
+    font-size: 18px;
+  }
+}
+.twitter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 40px;
+}
+.twitterHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.twitterHeaderLogo {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  background-color: black;
+  border-radius: 5px;
+  width: 60px;
+  height: 75px;
+  top: -20px;
+  left: 40px;
+}
+.twitterHeaderLogo img {
+  width: 100%;
+}
+.twitterHeaderDate {
+  color: #747474;
+  font-size: 16px;
+}
+.twitterText h1 {
+  text-align: center;
+  color: #747474;
+  margin: 25px 0;
+}
+.twitterText p {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  color: #747474;
+}
+.twitterText a {
+  text-decoration: none;
+  color: #d40000;
+}
+
+@media screen and (max-width: 1024px) {
+  .twitter {
+    padding: 20px 15px;
+  }
+  .twitterHeaderLogo {
+    width: 40px;
+    height: 55px;
+    left: 15px;
+  }
+  .twitterHeader p {
+    font-size: 14px;
+  }
+  .twitterHeaderDate {
+    font-size: 14px;
+  }
+  .twitterText h1 {
+    font-size: 20px;
+  }
+  .twitterText p {
+    font-size: 18px;
+  }
+}
+body {
+  margin: 0 !important;
+}
+
+/*# sourceMappingURL=style.css.map */

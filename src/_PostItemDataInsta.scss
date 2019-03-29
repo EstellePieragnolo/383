@@ -1,0 +1,102 @@
+@import './vars';
+
+.insta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 30px 40px;
+
+    &Header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        &Logo {
+            position: absolute;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background-color: $black;
+            border-radius: 5px;
+            width: 60px;
+            height: 75px;
+            top: -20px;
+            left: 40px;
+
+            img {
+                width: 70%;
+                margin-bottom: 12px;
+            }
+        }
+
+        &Date {
+            color: $fontGrey;
+            font-size: $mini;
+            ;
+        }
+    }
+
+    &Picture {
+        text-decoration: none;
+
+        &:visited,
+        &:active {
+            color: black;
+        }
+
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &Text {
+        h3 {
+            color: $fontGrey;
+            margin: 25px 0;
+        }
+
+        p {
+            font-size: $medium;
+            letter-spacing: 0.5px;
+            color: $fontGrey;
+
+            a {
+                text-decoration: none;
+                color: $red;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .insta {
+        padding: 20px 15px;
+
+        &Header {
+            &Logo {
+
+                width: 40px;
+                height: 55px;
+                top: -20px;
+                left: 15px;
+            }
+
+            &Date {
+                font-size: $tiny;
+            }
+        }
+
+        &Text {
+            h3 {
+                font-size: $medium;
+            }
+
+            p {
+                font-size: $small;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,112 @@
+@import './vars';
+
+.filter {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 0 70px;
+    color: rgba(0, 0, 0, 0.8);
+
+    &Item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px 0 30px;
+
+        &ButtonUnselected {
+            text-align: center;
+            border: 1px solid $lightGrey;
+            padding: 20px;
+            width: 200px;
+            border-radius: 5px;
+            margin: 0 50px;
+            font-size: $medium;
+            cursor: pointer;
+
+            &:hover {
+                border: 1px solid rgba(116, 116, 116, 0.4);
+            }
+        }
+
+        &ButtonSelected {
+            text-align: center;
+            border: 1px solid $lightGrey;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 200px;
+            border-radius: 5px;
+            margin: 0 50px;
+            font-size: $medium;
+            cursor: pointer;
+
+            &:hover {
+                border: 1px solid rgba(116, 116, 116, 0.4);
+            }
+        }
+    }
+
+    &Count {
+        text-align: center;
+        font-size: $small;
+    }
+
+    &Anchor {
+        position: fixed;
+        bottom: 15px;
+        right: 0;
+        color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        padding: 10px;
+        margin: 15px;
+        text-align: center;
+        border: 1px solid #bbbaba;
+        background-color: $lightGrey;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+}
+
+
+@media screen and (min-width: 577px) and (max-width: 1200px) {
+    .filter {
+        &Item {
+            justify-content: center;
+
+            &ButtonUnselected,
+            &ButtonSelected {
+                width: 125px;
+                margin: 0 30px;
+                font-size: $small;
+                padding: 20px;
+            }
+        }
+
+        &Count {
+            text-align: center;
+            font-size: $tiny;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .filter {
+        &Item {
+            justify-content: space-around;
+
+            &ButtonUnselected,
+            &ButtonSelected {
+                width: 75px;
+                margin: 0;
+                font-size: $tiny;
+                padding: 8px;
+            }
+        }
+
+        &Count {
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+}
